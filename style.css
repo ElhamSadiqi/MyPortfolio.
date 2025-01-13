@@ -1,0 +1,170 @@
+body{
+    background-color: hsl(276, 84%, 10%);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    height: 15100px;
+}
+
+.nav-links{
+    margin-left: 55px;
+    padding-top: 65px;
+    display:grid;
+    grid-template-columns: 250px 100px 120px 100px 410px 70px 100px;  
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+    margin-top: -5px;
+}
+
+.nav.style{
+    color: rgba(247, 214, 214, 0.651);
+    font-size: 18px;
+    
+}
+
+/* Remove underline from all <a> links inside .nav-links */
+.nav-links a {
+    text-decoration: none;
+  }
+
+.nav.button{
+    margin-top: -17px;
+    width: 230px;
+    height: 48px;
+    border-radius: 25px;
+    color: white;
+    background-color: rgb(104, 104, 153);
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.div{
+    display: inline-block;
+    margin-left: 110px;
+    width: 500px;
+
+}
+
+.div1{
+    width: 200px;
+    margin-top: 27px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+     /* Common animation for up and down movement */
+     @keyframes upAndDown {
+      0%, 100% { transform: translateY(0); }  /* Starting and ending position */
+      50% { transform: translateY(-20px); }  /* Move up */
+  }
+
+  /* First image with unique speed */
+  .image1 img {
+      animation: upAndDown 3.5s ease-in-out infinite; /* 2-second duration */
+      animation-delay: 0.5s;
+    }
+
+  /* Second image with unique speed */
+  .image2 img {
+      animation: upAndDown 3s ease-in-out infinite; /* 3-second duration */
+      animation-delay: 0.2s;
+    }
+
+  /* Third image with unique speed */
+  .image3 img {
+      animation: upAndDown 4.5s ease-in-out infinite; /* 1.5-second duration */
+      animation-delay: 1s;
+    }
+
+    
+    /* Apply the up and down animation only to images inside the .image4 container */
+    .image4 img {
+        animation: upAndDown 4.5s ease-in-out infinite; /* This applies to images within .image4 only */
+       }
+
+       .image5 img {
+        animation: upAndDown 7.5s ease-in-out infinite; /* This applies to images within .image4 only */
+       }
+
+        .wave {
+        display: inline-block;
+        font-size: 50px; /* Adjust size as needed */
+        animation: wave 5.5s ease-in-out infinite; /* Total cycle: 1.5s animation + 10s pause */
+        transform-origin: 70% 70%; /* Set origin for the waving effect */
+         }
+
+    @keyframes wave {
+        0% {
+            transform: rotate(0deg); /* Start at original position */
+        }
+        5% {
+            transform: rotate(15deg); /* Slightly tilted up */
+        }
+        10% {
+            transform: rotate(-10deg); /* Slightly tilted down */
+        }
+        15% {
+            transform: rotate(0deg); /* Back to original position */
+        }
+        100% {
+            transform: rotate(0deg); /* Stay at the original position for the rest of the duration */
+        }
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+        width: 250px;
+        margin-left: 120px;
+        margin-top: 30px;
+        
+      }
+  
+      .social-media img {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s ease;
+      }
+  
+    
+      .social-media img:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+        filter: brightness(0) invert(1); /* White effect */
+      }
+
+          /* Modal Styles */
+    #disclaimerModal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      #disclaimerContent {
+        background: rgba(7, 5, 31, 0.801);
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 400px;
+      }
+      #disclaimerContent button {
+        margin-top: 10px;
+        padding: 8px 16px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
